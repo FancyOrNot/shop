@@ -5,6 +5,7 @@ $(function () {
     $("#list_1").on("click", ".dropdown", function () {
         $(this).children(".dropdown-menu").fadeIn(1000);
         $(this).stop(true, false).animate({ "margin-bottom": "400px" }, 800, function () {
+            $(this).animate({ "margin-bottom": "" + $(this).children(".dropdown-menu").css("height") }, 500, function(){});
             // 给标签添加标志，
             // 改变小箭头指向
             $(this).attr("flag", "true").find(".jiantou").html("&#xe60a;");
